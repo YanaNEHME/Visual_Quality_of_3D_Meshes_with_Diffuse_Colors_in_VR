@@ -1,0 +1,6 @@
+- The title of the submission: Visual Quality of 3D Meshes with Diffuse Colors in Virtual Reality: Subjective and Objective Evaluation
+  (Publised in IEEE TVCG, DOI: 10.1109/TVCG.2020.3036153
+
+- The authors: Yana Nehmé, Florent Dupont, Jean-Philippe Farrugia, Patrick Le Callet and Guillaume Lavoué.
+
+- The operating system: Windows
