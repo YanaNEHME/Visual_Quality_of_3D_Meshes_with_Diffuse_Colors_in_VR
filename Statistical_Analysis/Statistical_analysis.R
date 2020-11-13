@@ -14,9 +14,6 @@ full_path_of_outputFile = args[2]#ex: "D:/IEEE TVCG/Replicability Stamp/Statisti
 
 ################### Get The subjective data collected from THE subjective experiment ########################
 
-# Specify the full path of the data file ("All_Stimuli_MOS_and_MLE.csv")
-full_path_of_dataFile = 'D:/IEEE TVCG/Replicability Stamp/Statistical_Analysis/All_Stimuli_MOS_and_MLE.csv' 
-
 # Read data
 Collected_data <-read.csv(full_path_of_dataFile,header=T,sep = ",",stringsAsFactors=T)
 
@@ -30,7 +27,7 @@ Collected_data$Distortion_type_aka <- factor(Collected_data$Distortion_type_aka 
 #################### Generate Figure 6 ################################
 #Ovrview of the mean opinion scores of all the stimuli, associated with their confidence intervals. 
 
-pdf(file=paste0(full_path_of_outputFile,"/Fig_6.pdf"), width=11.68, height=8.26) #save figure as pdf
+pdf(file=paste0(full_path_of_outputFile,"Fig_6.pdf"), width=11.68, height=8.26) #save figure as pdf
 
 ggplot(data = Collected_data , aes(x = Distortion_strength, y = MOS, color = Viewpoint)) + 
   geom_errorbar(aes(ymax = MOS + CI, ymin= MOS - CI, linetype = Animation),lwd=0.5, width =0.8, position = position_dodge(0.6)) +
@@ -51,9 +48,10 @@ invisible(dev.off())
 print(paste0("Fig. 6 saved in ",full_path_of_outputFile))
 
 #################### Generate Figure 7 ################################
+# Factors that influence on MOSs
 
 # fig 7.a
-pdf(file=paste0(full_path_of_outputFile,"/Fig_7(a).pdf"), width=6.5, height=6.5)#save figure as pdf
+pdf(file=paste0(full_path_of_outputFile,"Fig_7(a).pdf"), width=6.5, height=6.5)#save figure as pdf
 
 ggplot(Collected_data, aes(x=Source_model, y=MOS))+
   stat_boxplot(geom ='errorbar') +
@@ -71,7 +69,7 @@ invisible(dev.off())
 print(paste0("Fig. 7(a) saved in ",full_path_of_outputFile))
 
 # fig 7.b
-pdf(file=paste0(full_path_of_outputFile,"/Fig_7(b).pdf"), width=6.5, height=6.5)#save figure as pdf
+pdf(file=paste0(full_path_of_outputFile,"Fig_7(b).pdf"), width=6.5, height=6.5)#save figure as pdf
 
 ggplot(Collected_data, aes(x=Source_model, y=MOS, color= Viewpoint))+
   stat_boxplot(geom ='errorbar') +
@@ -92,7 +90,7 @@ invisible(dev.off())
 print(paste0("Fig. 7(b) saved in ",full_path_of_outputFile))
 
 # fig 7.c
-pdf(file=paste0(full_path_of_outputFile,"/Fig_7(c).pdf"), width=6.5, height=6.5)#save figure as pdf
+pdf(file=paste0(full_path_of_outputFile,"Fig_7(c).pdf"), width=6.5, height=6.5)#save figure as pdf
 
 ggplot(Collected_data, aes(x=Distortion_type_aka, y=MOS, color= Viewpoint))+
   stat_boxplot(geom ='errorbar') +
@@ -113,7 +111,7 @@ invisible(dev.off())
 print(paste0("Fig. 7(c) saved in " ,full_path_of_outputFile))
 
 # fig 7.d
-pdf(file=paste0(full_path_of_outputFile,"/Fig_7(d).pdf"), width=6.5, height=6.5)#save figure as pdf
+pdf(file=paste0(full_path_of_outputFile,"Fig_7(d).pdf"), width=6.5, height=6.5)#save figure as pdf
 
 ggplot(Collected_data, aes(x=Distortion_strength, y=MOS, color= Viewpoint))+
   stat_boxplot(geom ='errorbar') +
@@ -134,9 +132,10 @@ invisible(dev.off())
 print(paste0("Fig. 7(d) saved in ",full_path_of_outputFile))
 
 #################### Generate Figure 8 ################################
+# Factors that influence on CIs
 
 # fig 8.a
-pdf(file=paste0(full_path_of_outputFile,"/Fig_8(a).pdf"), width=5, height=7)#save figure as pdf
+pdf(file=paste0(full_path_of_outputFile,"Fig_8(a).pdf"), width=5, height=7)#save figure as pdf
 
 ggplot(Collected_data, aes(x=Source_model, y=CI))+
   stat_boxplot(geom ='errorbar') +
@@ -155,7 +154,7 @@ invisible(dev.off())
 print(paste0("Fig. 8(a) saved in ", full_path_of_outputFile))
 
 # fig 8.b
-pdf(file=paste0(full_path_of_outputFile,"/Fig_8(b).pdf"), width=5, height=7)#save figure as pdf
+pdf(file=paste0(full_path_of_outputFile,"Fig_8(b).pdf"), width=5, height=7)#save figure as pdf
 
 ggplot(Collected_data, aes(x=Viewpoint, y=CI))+
   stat_boxplot(geom ='errorbar') +
@@ -174,7 +173,7 @@ invisible(dev.off())
 print(paste0("Fig. 8(b) saved in ",full_path_of_outputFile))
 
 # fig 8.c
-pdf(file=paste0(full_path_of_outputFile,"/Fig_8(c).pdf"), width=5, height=7)#save figure as pdf
+pdf(file=paste0(full_path_of_outputFile,"Fig_8(c).pdf"), width=5, height=7)#save figure as pdf
 
 ggplot(Collected_data, aes(x=Viewpoint, y=CI, color= Animation))+
   stat_boxplot(geom ='errorbar') +
