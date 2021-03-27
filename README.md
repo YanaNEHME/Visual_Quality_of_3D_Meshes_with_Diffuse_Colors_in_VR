@@ -15,7 +15,7 @@ in the "Statistical_Analysis" folder.
 The results are shown in the "Results" folder.
 
 This work refers to the following publication:
-<i>Y. Nehmé, F. Dupont, J. Farrugia, P. Le Callet and G. Lavoue, "Visual Quality of 3D Meshes with Diffuse Colors in Virtual Reality: Subjective and 
-Objective Evaluation" in IEEE Transactions on Visualization & Computer Graphics, vol. , no. 01, pp. 1-18, 5555.
+<i>Y. NehmÃ©, F. Dupont, J. Farrugia, P. Le Callet and G. Lavoue, "Visual Quality of 3D Meshes with Diffuse Colors in Virtual Reality: Subjective and 
+Objective Evaluation" in IEEE Transactions on Visualization & Computer Graphics (TVCG), vol. 27, no. 03, 2021.
 doi: 10.1109/TVCG.2020.3036153</i>
 
